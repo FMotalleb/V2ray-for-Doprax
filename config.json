@@ -4,15 +4,18 @@
 		"error": "/dev/null",
 		"loglevel": "warning"
 	},
-	"inbounds": [{
+	"inbounds": [
+		{
 			"port": 10000,
 			"listen": "127.0.0.1",
 			"protocol": "vmess",
 			"settings": {
-				"clients": [{
-					"id": "UUID",
-					"alterId": 0
-				}]
+				"clients": [
+					{
+						"id": "UUID",
+						"alterId": 0
+					}
+				]
 			},
 			"streamSettings": {
 				"network": "ws",
@@ -26,9 +29,11 @@
 			"listen": "127.0.0.1",
 			"protocol": "vless",
 			"settings": {
-				"clients": [{
-					"id": "UUID"
-				}],
+				"clients": [
+					{
+						"id": "UUID"
+					}
+				],
 				"decryption": "none"
 			},
 			"streamSettings": {
@@ -39,10 +44,52 @@
 			}
 		}
 	],
-	"outbounds": [{
-		"protocol": "freedom",
-		"settings": {}
-	}],
+	"outbounds": [
+		{
+			"mux": {
+				"concurrency": 8,
+				"enabled": false
+			},
+			"protocol": "vmess",
+			"settings": {
+				"vnext": [
+					{
+						"address": "ttttrrc2xy.asiaedfugtrqoi.dopraxrocks.com",
+						"port": 443,
+						"users": [
+							{
+								"alterId": 0,
+								"encryption": "",
+								"flow": "",
+								"id": "de04add9-5c68-8bab-950c-08cd5320df18",
+								"level": 8,
+								"security": "auto"
+							}
+						]
+					}
+				]
+			},
+			"streamSettings": {
+				"network": "ws",
+				"security": "tls",
+				"tlsSettings": {
+					"allowInsecure": true,
+					"fingerprint": "",
+					"publicKey": "",
+					"serverName": "",
+					"shortId": "",
+					"show": false,
+					"spiderX": ""
+				},
+				"wsSettings": {
+					"headers": {
+						"Host": ""
+					},
+					"path": "/vmess"
+				}
+			}
+		}
+	],
 	"dns": {
 		"server": [
 			"8.8.8.8",
