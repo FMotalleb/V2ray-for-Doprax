@@ -46,48 +46,8 @@
 	],
 	"outbounds": [
 		{
-			"mux": {
-				"concurrency": 8,
-				"enabled": false
-			},
-			"protocol": "vmess",
-			"settings": {
-				"vnext": [
-					{
-						"address": "ttttrrc2xy.asiaedfugtrqoi.dopraxrocks.com",
-						"port": 443,
-						"users": [
-							{
-								"alterId": 0,
-								"encryption": "",
-								"flow": "",
-								"id": "de04add9-5c68-8bab-950c-08cd5320df18",
-								"level": 8,
-								"security": "auto"
-							}
-						]
-					}
-				]
-			},
-			"streamSettings": {
-				"network": "ws",
-				"security": "tls",
-				"tlsSettings": {
-					"allowInsecure": true,
-					"fingerprint": "",
-					"publicKey": "",
-					"serverName": "",
-					"shortId": "",
-					"show": false,
-					"spiderX": ""
-				},
-				"wsSettings": {
-					"headers": {
-						"Host": ""
-					},
-					"path": "/vmess"
-				}
-			}
+			"protocol": "freedom",
+			"settings": {}
 		}
 	],
 	"dns": {

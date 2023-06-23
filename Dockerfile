@@ -1,5 +1,4 @@
 FROM nginx:mainline-alpine-slim
-MAINTAINER ifeng <https://t.me/HiaiFeng>
 EXPOSE 80
 USER root
 
@@ -27,5 +26,5 @@ RUN wget -q -O /tmp/v2ray-linux-64.zip https://github.com/v2fly/v2ray-core/relea
     rm -rf /tmp/v2ray-linux-64.zip && \
     rm -rf /var/cache/apk/* && \
     rm -rf /tmp/*
-    
+
 ENTRYPOINT [ "/usr/local/v2ray/entrypoint.sh" ]
